@@ -29,13 +29,20 @@ const routes: Routes = [
             title: 'Init'
         }
     },
-
     {
         path: 'job-list',
         loadChildren: () => import('./pages/job-list-page/job-list.module').then(m => m.JobListPageModule),
         canActivate: [AuthGuard],
         data: {
             title: 'JobList'
+        }
+    },
+    {
+        path: 'job/:id',
+        loadChildren: () => import('./pages/job-page/job-page.module').then(m => m.JobPageModule),
+        canActivate: [AuthGuard],
+        data: {
+            title: 'Job'
         }
     },
     {
