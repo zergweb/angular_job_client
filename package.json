@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build:prod": "ng build --prod --configuration=production",
     "build:github": "ng build --prod --base-href \"https://zergweb.github.io/angular_job_client/\"",
-    "publish:git": "ngh --dir dist/DefaultBlank"
+    "publish:git": "ngh --dir dist/AngularJobClient"
   },
   "private": true,
   "dependencies": {

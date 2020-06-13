@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AccessDeniedPageComponent } from './access-denied-page.component';
+import { NavigationHeaderComponent } from './navigation-header.component';
 
-describe('AccessDeniedPageComponent', () => {
-  let component: AccessDeniedPageComponent;
-  let fixture: ComponentFixture<AccessDeniedPageComponent>;
+describe('NavigationHeaderComponent', () => {
+  let component: NavigationHeaderComponent;
+  let fixture: ComponentFixture<NavigationHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccessDeniedPageComponent ]
+      declarations: [ NavigationHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AccessDeniedPageComponent);
+    fixture = TestBed.createComponent(NavigationHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

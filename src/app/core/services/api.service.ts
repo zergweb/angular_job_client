@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { APP_CONFIG } from '../../../environments/app-config';
+import { environment as APP_CONFIG } from '../../../environments/environment';
 
 const DEFAULT_HEADERS: HttpHeaders = new HttpHeaders({
     'Content-type': 'application/json'
@@ -32,7 +32,7 @@ export class ApiService {
             headers: this.getRequiredHeaders(),
             params
         };
-        return this.rest.post<T>(url, body , options).pipe();
+        return this.rest.post<T>(url, body , options);
     }
 
     private getUrl(endpoint: string): string{

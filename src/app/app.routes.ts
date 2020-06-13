@@ -7,6 +7,13 @@ import { NotFoundPageComponent } from './shared/components/not-found-page/not-fo
 import { AuthGuardService as AuthGuard } from './core/services/auth-guard.service';
 const routes: Routes = [
     {
+        path: 'login',
+        loadChildren: () => import('./pages/login-page/login-page.module').then(m => m.LoginPageModule),
+        data: {
+            title: 'Login'
+        }
+    },
+    {
         path: '',
         pathMatch: 'full',
         redirectTo: 'init',
@@ -22,11 +29,13 @@ const routes: Routes = [
             title: 'Init'
         }
     },
+
     {
-        path: 'login',
-        loadChildren: () => import('./pages/login-page/login-page.module').then(m => m.LoginPageModule),
+        path: 'job-list',
+        loadChildren: () => import('./pages/job-list-page/job-list.module').then(m => m.JobListPageModule),
+        canActivate: [AuthGuard],
         data: {
-            title: 'Login'
+            title: 'JobList'
         }
     },
     {

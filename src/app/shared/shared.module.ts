@@ -5,20 +5,22 @@ import { NoContentPageComponent } from './components/no-content-page/no-content-
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { AccessDeniedPageComponent } from './components/access-denied-page/access-denied-page.component';
 import { MaterialModule } from '../modules/material.module';
+import { NavigationHeaderComponent } from './components/navigation-header/navigation-header.component';
 
 const items = [
   NotFoundPageComponent,
   NoContentPageComponent,
   ErrorPageComponent,
-  AccessDeniedPageComponent
+  AccessDeniedPageComponent,
+  NavigationHeaderComponent
 ];
 
 @NgModule({
-  declarations: [...items],
+  declarations: [items],
   imports: [
     CommonModule,
     MaterialModule
   ],
-  exports: [...items, MaterialModule]
+  exports: [items, MaterialModule]
 })
 export class SharedModule { }

@@ -1,5 +1,5 @@
 
-export interface JobDto {
+export interface IJobItem {
     id: number;
     name: string;
     key: string;

@@ -20,4 +20,7 @@ export class NavigateService {
     public goToNoContentPage(silent: boolean = true): void{
         this.router.navigate(['/204'], {skipLocationChange: silent});
     }
+    public goToJobListPage(silent: boolean = true): void{
+        this.router.navigate(['/job-list'], {skipLocationChange: silent});
+    }
 }

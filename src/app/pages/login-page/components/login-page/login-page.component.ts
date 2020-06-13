@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { NavigateService } from 'src/app/core/services/navigate.service';
 
 @Component({
   selector: 'app-login-page',
@@ -14,7 +15,7 @@ export class LoginPageComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private navigateService: NavigateService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class LoginPageComponent implements OnInit {
   public login(): void{
     if (this.form.valid) {
       this.auth.login();
+      this.navigateService.goToJobListPage();
     }
   }
 
