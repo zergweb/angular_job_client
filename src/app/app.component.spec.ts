@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DefaultBlank'`, () => {
+  it(`should have as title 'JobClient'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DefaultBlank');
+    expect(app.title).toEqual('JobClient');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('DefaultBlank app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('JobClient app is running!');
   });
 });

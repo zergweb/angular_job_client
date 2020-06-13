@@ -16,9 +16,9 @@ const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'init',
+        redirectTo: 'job-list',
         data: {
-            title: 'init'
+            title: 'job-list'
         }
     },
     {
